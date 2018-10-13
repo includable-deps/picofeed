@@ -1,10 +1,15 @@
 <?php
 return array(
-    'test_url' => 'http://www.numerama.com/magazine/26857-bientot-des-robots-dans-les-cuisines-de-mcdo.html',
-    'body' => array(
-        '//*[@id="general_content"]/table/tbody/tr/td[1]/div/div/div[6]/h2',
-        '//div[@id="newstext"]',
+    'grabber' => array(
+        '%.*%' => array(
+            'test_url' => 'http://www.numerama.com/sciences/125959-recherches-ladn-recompensees-nobel-de-chimie.html',
+            'body' => array(
+                '//article',
+            ),
+            'strip' => array(
+                '//footer',
+                '//section[@class="related-article"]',
+            ),
+        ),
     ),
-    'strip' => array(
-    )
 );

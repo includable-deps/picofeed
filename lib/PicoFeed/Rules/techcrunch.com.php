@@ -1,13 +1,15 @@
 <?php
 return array(
-    'test_url' => 'http://techcrunch.com/2013/08/31/indias-visa-maze/',
-    'body' => array(
-        '//div[contains(@class, "media-container")]',
-        '//div[@class="body-copy"]',
+    'grabber' => array(
+        '%.*%' => array(
+            'test_url' => 'http://techcrunch.com/2013/08/31/indias-visa-maze/',
+            'body' => array(
+                '//div[contains(@class, "media-container")]',
+                '//div[contains(@class, "article-entry")]',
+            ),
+            'strip' => array(
+                '//*[contains(@class, "module-crunchbase")]',
+            ),
+        ),
     ),
-    'strip' => array(
-        '//script',
-        '//style',
-        '//*[contains(@class, "module-crunchbase")]'
-    )
 );
