@@ -1,7 +1,7 @@
 {
     "name": "includable-deps/picofeed",
     "description": "Feeds writer/reader (alternative to SimplePie)",
-    "homepage": "https://github.com/fguillot/picoFeed",
+    "homepage": "https://github.com/includable-deps/picofeed",
     "type": "library",
     "license": "Unlicense",
     "authors": [
