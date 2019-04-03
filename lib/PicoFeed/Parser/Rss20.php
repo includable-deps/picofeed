@@ -220,6 +220,10 @@ class Rss20 extends Parser
         $content = XmlParser::getXPathResult($entry, 'content:encoded', $this->namespaces);
 
         if (XmlParser::getValue($content) === '') {
+            $content = XmlParser::getXPathResult($entry, 'content', $this->namespaces);
+        }
+
+        if (XmlParser::getValue($content) === '') {
             $content = XmlParser::getXPathResult($entry, 'description');
         }
 

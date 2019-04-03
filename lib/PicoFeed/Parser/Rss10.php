@@ -227,6 +227,10 @@ class Rss10 extends Parser
         $content = XmlParser::getXPathResult($entry, 'content:encoded', $this->namespaces);
 
         if (XmlParser::getValue($content) === '') {
+            $content = XmlParser::getXPathResult($entry, 'content', $this->namespaces);
+        }
+
+        if (XmlParser::getValue($content) === '') {
             $content = XmlParser::getXPathResult($entry, 'rss:description', $this->namespaces)
                 ?: XmlParser::getXPathResult($entry, 'description')
                 ?: $entry->description;
